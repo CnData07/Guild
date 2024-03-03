@@ -1,0 +1,10 @@
+{
+    "entry": "Guild.js",
+    "name": "Guild",
+    "type": "lse-quickjs",
+    "dependencies": [
+        {
+            "name": "legacy-script-engine-quickjs"
+        }
+    ]
+}
