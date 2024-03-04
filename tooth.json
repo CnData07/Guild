@@ -6,8 +6,13 @@
         "name": "Guild",
         "description": "Guild",
         "author": "CnData07",
-        "tags": []
+        "tags": ["plugin", "lse", "quickjs", "guild"]
     },
     "commands": {},
-    "files": {}
+    "files": {
+        {
+            "src": "Guild.js",
+            "dest": "plugins/Guild/Guild.js"
+        }
+    }
 }
