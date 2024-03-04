@@ -9,10 +9,14 @@
         "tags": ["plugin", "lse", "quickjs", "guild"]
     },
     "commands": {},
-    "files": {
+    "files": [
         {
             "src": "Guild.js",
             "dest": "plugins/Guild/Guild.js"
-        }
-    }
+        }，
+        {
+            "src": "manifest.json",
+            "dest": "plugins/Guild/manifest.json"
+         }
+    ]
 }
