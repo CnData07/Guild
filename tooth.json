@@ -7,7 +7,8 @@
         "description": "A guild plugins",
         "author": "Liko",
         "tags": [
-            "guild"
+            "mod",
+            "ll"
         ]
     },
     "asset_url": "https://github.com/CnData07/guild/releases/download/v$(version)/Guild-$(version).zip",
