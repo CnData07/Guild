@@ -1,0 +1,34 @@
+{
+    "CreateCost": 6000,
+    "maxJoinCost": 5000,
+    "openGui": "saku:guild_menu",
+    "chat": "#",
+    "chest": {
+        "max": 3,
+        "levelCost": [
+            {
+                "cost": 1000,
+                "max": 100
+            },
+            {
+                "cost": 1500,
+                "max": 120
+            },
+            {
+                "cost": 2000,
+                "max": 150
+            },
+            {
+                "cost": 2500,
+                "max": 200
+            }
+        ]
+    },
+    "toast": {
+        "error": "§c【 错误 】",
+        "succee": "§a【 成功 】",
+        "tip": "§6【 提示 】"
+    },
+    "tpPointsMax": 8,
+    "chatOpen": 0
+}
