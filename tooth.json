@@ -1,9 +1,9 @@
 {
     "format_version": 2,
-    "tooth": "github.com/CnData07/Guild",
+    "tooth": "github.com/cnData07/guild",
     "version": "1.1.2",
     "info": {
-        "name": "guild",
+        "name": "Guild",
         "description": "A guild plugins",
         "author": "Liko",
         "tags": [
