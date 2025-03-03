@@ -1,0 +1,49 @@
+name: Create and Release Archive
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Read version from tooth.json
+      id: version
+      run: |
+        VERSION=$(jq -r '.version' tooth.json)
+        echo "version=${VERSION}" >> $GITHUB_OUTPUT
+
+    - name: Create Guild structure
+      run: |
+        mkdir Guild
+        rsync -av --exclude='tooth.json' --exclude='.git/' --exclude='.github/' ./ Guild/
+
+    - name: Create ZIP archive
+      run: zip -r Guild-${{ steps.version.outputs.version }}.zip Guild
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ steps.version.outputs.version }}
+        release_name: Guild ${{ steps.version.outputs.version }}
+        draft: false
+        prerelease: false
+
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./Guild-${{ steps.version.outputs.version }}.zip
+        asset_name: Guild-${{ steps.version.outputs.version }}.zip
+        asset_content_type: application/zip
