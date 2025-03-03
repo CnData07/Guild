@@ -7,9 +7,6 @@
         "description": "A guild plugins",
         "author": "Liko",
         "tags": [
-            "plugin",
-            "lse",
-            "quickjs",
             "guild"
         ]
     },
