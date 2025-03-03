@@ -5,11 +5,7 @@
     "info": {
         "name": "Guild",
         "description": "A guild plugins",
-        "author": "Liko",
-        "tags": [
-            "mod",
-            "ll"
-        ]
+        "author": "Liko"
     },
     "asset_url": "https://github.com/CnData07/guild/releases/download/v$(version)/Guild-$(version).zip",
     "prerequisites": {
