@@ -7,7 +7,7 @@
         "description": "A guild plugins",
         "author": "Liko"
     },
-    "asset_url": "https://github.com/CnData07/guild/releases/download/v$(version)/Guild-$(version).zip",
+    "asset_url": "https://github.com/CnData07/Guild/releases/download/v$(version)/Guild-$(version).zip",
     "prerequisites": {
         "github.com/LiteLDev/LeviLamina": ">0.11.1",
         "github.com/GroupMountain/GMLIB": ">0.13.9",
